@@ -13,4 +13,4 @@ A customized music experience.
 
 ![Root route](/public/screenshots/root-route.png "Title")
 
-![Eat route](/public/screenshots/eat-route.png "Title")
+![Playlist route](/public/screenshots/playlist-route.png "Title")
