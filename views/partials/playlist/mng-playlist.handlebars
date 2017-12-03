@@ -1,0 +1,19 @@
+<div class="column is-one-third-desktop">
+    <h1 class="title">
+        Manage Playlist: <br>
+        <span id="smallParens">(Add, Remove, Share)</span>
+    </h1>
+    {{#each notSelected}}
+        <div class="box">
+            <div class="level">
+                <div class="level-item left-align">
+                    <span class="heading">{{Artist.name}}</span>
+                </div>
+                <div class="level-item right-align">
+                    {{> playlist/intoPlaylist-btn}}
+                    {{> del-from-selection-btn}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

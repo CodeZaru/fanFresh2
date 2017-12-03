@@ -1,0 +1,19 @@
+{{#if selections}}
+    <section class="section">
+        <h1 class="title">Your Selection</h1>
+        <div class="container">
+            {{> selections}}
+
+            <div class="">
+                {{> mng-playlist-btn}}
+            </div>
+        </div>
+    </section>
+{{/if}}
+
+<section class="section">
+    <h1 class="title">Favorite Artists</h1>
+    <div class="columns is-multiline is-desktop">
+        {{> favorites/artists/artists}}
+    </div>
+</section>

@@ -1,0 +1,21 @@
+{
+  "development": {
+    "username": "kevin",
+    "password": "gwbootcamp",
+    "port": 3307,
+    "database": "fanFreshDB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "fanFreshDB",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}

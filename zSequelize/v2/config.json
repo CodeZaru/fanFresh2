@@ -1,0 +1,21 @@
+{
+  "development": {
+    "username": "kevin",
+    "password": "gwbootcamp",
+    "port": 3307,
+    "database": "sequelized_burgerDB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "sequelized_burgerDB",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}
