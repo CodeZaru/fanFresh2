@@ -30,8 +30,9 @@ app.use('/scripts', express.static(__dirname + "/node_modules/jquery/dist/"));
 app.use('/public', express.static(__dirname + "/public/css/"));
 
 // ----- Routes ------ //
-require('./routes/playlist-routes')(app);
 require('./routes/root-routes')(app);
+require('./routes/playlist-routes')(app);
+require('./routes/favorites-routes')(app);
 
 
 //db.sequelize.sync({ force: true }).then(function() {

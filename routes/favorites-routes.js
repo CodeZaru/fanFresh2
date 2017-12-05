@@ -2,7 +2,7 @@ let db = require('../models');
 
 module.exports = function(app) {
     // gets all da Artists on the menu
-    app.get('/', (req, res) => {
+    app.get('/favorites', (req, res) => {
         db.Artist.findAll().then(artists => {
             db.Selection.findAll({
                 'where': {
@@ -10,7 +10,7 @@ module.exports = function(app) {
                 },
                 'include': [ db.Artist ]
             }).then(selections => {
-                res.render('index', { artists, selections });
+                res.render('favorites-page', { artists, selections });
             });
         });
     });
@@ -20,12 +20,12 @@ module.exports = function(app) {
         db.Selection.create({
             'selected': 0,
             'ArtistId': req.params.artistId
-        }).then(() => res.redirect('/'));
+        }).then(() => res.redirect('/favorites'));
     });
 
     // posts a new artist to the menu
     app.post('/new', (req, res) => {
-        db.Artist.create(req.body).then(() => res.redirect('/'));
+        db.Artist.create(req.body).then(() => res.redirect('/favorites'));
     });
 
     // removes a artist from the favorites panel - OR - removes a artist from the selection
@@ -43,7 +43,7 @@ module.exports = function(app) {
                 'where': {
                     'id': req.params.id
                 }
-            }).then(() => res.redirect('/'));
+            }).then(() => res.redirect('/favorites'));
         }
     });
 }
