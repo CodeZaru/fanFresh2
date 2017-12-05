@@ -13,22 +13,65 @@
 
 <body>
 
+<div id="navhbs">
     {{> nav}}
+ </div>
+
     {{{body}}}
 
-    {{> create-modal}}
+    {{> create-modal1}}
+
+    {{> modals/signup/create-modal-form-type-signup}}
+    {{> modals/login/create-modal-form-type-login}}
 
     <script src="scripts/jquery.min.js"></script>
     <script type="text/javascript">
-        $('body').on('click', '#modal-btn', (e) => {
+
+//VERY IMPORTANT CODE: this maps the "click" element to "modal" element.
+ /*       $('navhbs').on('click', '#modal2-btn', (e) => {
             e.preventDefault();
-            $('#create-modal').toggleClass('is-active');
+        $('#create-modal2').toggleClass('is-active');
+        });
+        
+        $('navhbs').on('click', '#close-modal2', (e) => {
+            e.preventDefault();
+            $('#create-modal2').toggleClass('is-active');
+        });
+*/
+//VERY IMPORTANT CODE: this maps the "click" element to "modal" handlebars element in the body of this page.
+
+        $('body').on('click', '#modal1-btn', (e) => {
+            e.preventDefault();
+            $('#create-modal1').toggleClass('is-active');
         });
 
-        $('body').on('click', '#close-modal', (e) => {
+        $('body').on('click', '#close-modal1', (e) => {
             e.preventDefault();
-            $('#create-modal').toggleClass('is-active');
+            $('#create-modal1').toggleClass('is-active');
         });
+
+//VERY IMPORTANT CODE: this maps the "click" element to "modal" handlebars element in the body of this page.
+        $('body').on('click', '#modal2-btn', (e) => {
+            e.preventDefault();
+        $('#create-modal-form-type-signup').toggleClass('is-active');
+        });
+        
+        $('body').on('click', '#close-modal2', (e) => {
+            e.preventDefault();
+            $('#create-modal-form-type-signup').toggleClass('is-active');
+        });
+  
+//VERY IMPORTANT CODE: this maps the "click" element to "modal" handlebars element in the body of this page.
+        $('body').on('click', '#modal3-btn', (e) => {
+            e.preventDefault();
+        $('#create-modal-form-type-login').toggleClass('is-active');
+        });
+        
+        $('body').on('click', '#close-modal3', (e) => {
+            e.preventDefault();
+            $('#create-modal-form-type-login').toggleClass('is-active');
+        });
+
     </script>
 </body>
 </html>

@@ -25,18 +25,35 @@ body {
 }
 
 #navMenu {
-    background-color: #012d41 !important;
+   background-color: transparent !important;
+   background: transparent !important;
+   border-color: transparent !important;
+/*   background-color: #012d41 !important;*/
 }
 
+.navbar-brand {
+   background-color: transparent !important;
+   background: transparent !important;
+   border-color: transparent !important;
+}
+
+.primary-color{
+   background-color: transparent !important;
+   background: transparent !important;
+   border-color: transparent !important;
+ }
+
 .navbar-item {
-    background-color: #012d41 !important;
+/*    background-color: #012d41 !important;*/
+    background-color: transparent !important;
 }
 
 .navbar-item:hover {
     background-color: #56c0cc !important;
+/*    background-color: transparent !important;*/
 }
 
-#modal-btn {
+#modal1-btn {
     height: 141px;
     border-style: dashed;
     border-color: lightgrey;
@@ -52,10 +69,54 @@ body {
     transition: background-color .4s;
 }
 
-#modal-btn:hover {
+#modal1-btn:hover {
     cursor: pointer;
     background-color: #aaaaaa;
 }
+
+#modal2-btn {
+    height: 20px;
+    border-style: dashed;
+    border-color: lightgrey;
+    border-width: 4px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-transition: background-color .4s;
+    -o-transition: background-color .4s;
+    transition: background-color .4s;
+}
+
+#modal2-btn:hover {
+    cursor: pointer;
+    background-color: #aaaaaa;
+}
+
+
+#modal3-btn {
+    height: 20px;
+    border-style: dashed;
+    border-color: lightgrey;
+    border-width: 4px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-transition: background-color .4s;
+    -o-transition: background-color .4s;
+    transition: background-color .4s;
+}
+
+#modal3-btn:hover {
+    cursor: pointer;
+    background-color: #aaaaaa;
+}
+
 
 .add-sign {
     font-size: 20px;
