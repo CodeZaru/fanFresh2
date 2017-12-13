@@ -15,8 +15,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "kevin",
-    "password": "gwbootcamp",   
+  
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
